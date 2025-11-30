@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raj Medankar — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b1020;
+      --panel-dark: rgba(255,255,255,0.04);
+      --muted-light: #cfd4da;
+      --accent: #1e7b4a;
+      --border: rgba(255,255,255,0.08);
+    }
+    :root[data-theme="light"] {
+      --bg-dark: #f6f8fa;
+      --panel-dark: #ffffff;
+      --muted-light: #3c3c3c;
+      --accent: #17623a;
+      --border: #d0d7de;
+    }
+
+    *{box-sizing:border-box;}
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--muted-light);
+      padding: 28px;
+    }
+
+    .top-controls {
+      max-width: 1100px;
+      margin: 0 auto 14px auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .ctrl-btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted-light);
+      cursor: pointer;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 24px;
+    }
+
+    .panel {
+      background: var(--panel-dark);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 120px;
+      height:120px;
+      border-radius: 50%;
+      display:block;
+      margin: 0 auto 12px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      background:white;
+    }
+
+    .name {
+      text-align:center;
+      font-size:20px;
+      font-weight:700;
+      color: var(--accent);
+    }
+    .role {
+      text-align:center;
+      font-size:14px;
+      margin-top:4px;
+      color: var(--muted-light);
+    }
+    .meta {
+      text-align:center;
+      font-size:13px;
+      margin-top:4px;
+      color:var(--muted-light);
+    }
+
+    .tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:center;
+      margin:14px 0;
+    }
+    .tag {
+      padding:6px 10px;
+      font-size:12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--muted-light);
+    }
+
+    h2 {
+      margin:0 0 10px 0;
+      color: var(--accent);
+      font-size:18px;
+    }
+
+    .item {
+      margin-bottom:16px;
+    }
+    .title {
+      font-weight:600;
+      color:var(--muted-light);
+      font-size:15px;
+    }
+    .meta-small {
+      font-size:13px;
+      color:var(--muted-light);
+      margin:3px 0;
+    }
+    .desc {
+      font-size:14px;
+      color:var(--muted-light);
+      line-height:1.5;
+      margin-top:4px;
+    }
+
+    .skill-block {
+      margin-bottom:12px;
+    }
+    .skill-label {
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:4px;
+    }
+    .skill-bar {
+      height:10px;
+      background:var(--border);
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .fill {
+      height:100%;
+      background:var(--accent);
+    }
+
+    .view-btn {
+      margin-top:14px;
+      width:100%;
+      padding:10px;
+      background:var(--accent);
+      color:white;
+      font-weight:700;
+      border:0;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    .hero {
+      padding:18px;
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border:1px solid var(--border);
+    }
+    .hero h1 {
+      margin:0;
+      color:var(--accent);
+      font-size:22px;
+    }
+    .hero p {
+      margin-top:10px;
+      font-size:14px;
+      color:var(--muted-light);
+      line-height:1.55;
+    }
+
+    @media(max-width:900px){
+      .page {
+        grid-template-columns:1fr;
+      }
+      .avatar { margin: 0 auto; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-controls">
+    <button id="themeBtn" class="ctrl-btn">🌗 Theme</button>
+  </div>
+
+  <div class="page">
+
+    <!-- LEFT PANEL -->
+    <aside class="panel">
+      <img src="raj-photo.jpeg" class="avatar" alt="Profile Photo" onerror="this.src='https://via.placeholder.com/120'">
+
+      <div class="name">Raj Arun Medankar</div>
+      <div class="role">B.Tech — Electronics Engineering</div>
+      <div class="meta">PRN: <strong>202301060048</strong></div>
+
+      <div class="tags">
+        <span class="tag">IoT</span>
+        <span class="tag">LoRa</span>
+        <span class="tag">ESP32</span>
+        
+      </div>
+
+      <h2>Contact</h2>
+      <p class="meta"> +91 90750 66696</p>
+      <p class="meta"> rajmedankar6696@gmail.com</p>
+      <p class="meta"> 202301060048@mitaoe.ac.in</p>
+      <p class="meta">📍Pune, Maharashtra</p>
+
+      <h2 style="margin-top:18px">Skills</h2>
+
+      <div class="skill-block">
+        <div class="skill-label"><span>IoT & LoRa</span><span>90%</span></div>
+        <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label"><span>ESP32 / Arduino</span><span>88%</span></div>
+        <div class="skill-bar"><div class="fill" style="width:88%"></div></div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-label"><span>Sensor Interfacing</span><span>84%</span></div>
+        <div class="skill-bar"><div class="fill" style="width:84%"></div></div>
+      </div>
+
+      <button class="view-btn" onclick="openResume()">View Resume</button>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main>
+
+      <section class="hero">
+        <h1>Hello, I'm Raj</h1>
+        <p>
+          I have a strong interest in Business and electronic component exportation and learning new technologies, practical projects, and I like
+solving real-life problems. I always try to improve my skills, work with dedication, and I have interest in Business because of Family
+Background.
+
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="panel">
+        <h2>Selected Projects</h2>
+
+        <div class="item">
+          <div class="title">Hand Gesture Controlled Car (Arduino Nano)</div>
+          <div class="meta-small">Gesture Control • Accelerometer</div>
+          <div class="desc">A robot car that moves based on simple hand gestures. Built using an accelerometer and Arduino Nano.</div>
+        </div>
+
+        <div class="item">
+          <div class="title">Water Tank Level Indicator</div>
+          <div class="meta-small">LED Levels • Buzzer Alert</div>
+          <div class="desc">Simple tank level indication system using LEDs and a buzzer to avoid overflow and water wastage.</div>
+        </div>
+
+        <div class="item">
+          <div class="title">IoT-Based Farm Monitoring System Using LoRa</div>
+          <div class="meta-small">LoRa Wireless • Sensor Nodes</div>
+          <div class="desc">Uses LoRa nodes to send soil moisture, temperature and humidity data to a monitoring dashboard.</div>
+        </div>
+
+        <div class="item">
+          <div class="title">Water Quality Monitoring & Alert System (ESP32)</div>
+          <div class="meta-small">TDS • Turbidity • Temperature</div>
+          <div class="desc">Reads water-quality sensors through ESP32 and sends live data with alerts when water becomes unsafe.</div>
+        </div>
+
+        <div class="item">
+          <div class="title">Automatic Plant Watering System</div>
+          <div class="meta-small">Soil Moisture Based</div>
+          <div class="desc">Waters plants automatically based on soil moisture level for home automation.</div>
+        </div>
+      </section>
+
+      <!-- INTERNSHIPS -->
+      <section class="panel">
+        <h2>Internships</h2>
+
+        <div class="item">
+          <div class="title">Victora Industries Pvt Ltd</div>
+          <div class="meta-small">Jun 2025 – Jul 2025 • Automotive</div>
+          <div class="desc">Gained hands-on experience with basic electronics, circuit work, and industrial processes.</div>
+        </div>
+
+        <div class="item">
+          <div class="title">Aaradhya Coating Solution</div>
+          <div class="meta-small">Jun 2024 – Jul 2024 • Hardware Testing</div>
+          <div class="desc">Worked on testing tasks and learned practical methods for hardware quality checking.</div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <!-- <section class="panel">
+        <h2>Education</h2>
+
+        <div class="item">
+          <div class="title">B.Tech — Electronics Engineering</div>
+          <div class="meta-small">MIT Academy of Engineering</div>
+          <div class="meta-small">2023 – 2027 (Ongoing)</div>
+          <div class="meta-small">CGPA: 6.94</div>
+        </div>
+      </section> -->
+
+    </main>
+  </div>
+
+  <script>
+    // Dark/Light theme toggle
+    document.getElementById("themeBtn").onclick = () => {
+      const cur = document.documentElement.getAttribute("data-theme");
+      if (cur === "light") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", "light");
+    };
+
+    // Open resume
+    function openResume() {
+      window.open("Raj-Medankar-Resume.pdf", "_blank");
+    }
+  </script>
+
+</body>
+</html>
